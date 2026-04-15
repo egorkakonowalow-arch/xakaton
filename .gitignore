@@ -1,0 +1,9 @@
+﻿front/node_modules/
+**/node_modules/
+back/backend/uploads/
+back/backend/logs/
+*.rar
+.env
+back/backend/.env
+__pycache__/
+*.pyc
