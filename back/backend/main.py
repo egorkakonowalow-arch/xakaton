@@ -38,5 +38,5 @@ async def startup() -> None:
     async with AsyncSessionLocal() as session:
         admin = await session.scalar(select(User).where(User.email == "admin@local"))
         if not admin:
-            session.add(User(full_name="System Administrator", email="admin@local", hashed_password=get_password_hash("admin123"), role=UserRole.ADMIN, is_active=True))
+            session.add(User(full_name="System Administrator", email="admin@gmail.com", hashed_password=get_password_hash("admin123"), role=UserRole.ADMIN, is_active=True))
             await session.commit()
